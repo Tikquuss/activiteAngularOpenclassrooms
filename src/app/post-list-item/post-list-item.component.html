@@ -1,0 +1,19 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveIts >= 0,
+                'list-group-item-danger': loveIts < 0}"> 
+    
+        <h4 [ngStyle]="{color: getColor()}">
+                <strong style="position:absolute; top:0px;"> {{ title }} </strong >
+                <span style="position:absolute; right:30px; top:0px;">  {{ create_at | date : 'short' | uppercase }}</span >
+                
+                <p style ="left:30px;">  {{ content }}  </p>
+        </h4> 
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <button class="btn btn-sm btn-success"
+                  (click)="onLikeIt()">like it !</button>
+            <span>  </span>
+            <button class="btn btn-sm btn-danger"
+                  (click)="onDisLikeIt()">Don't like it !</button>
+        </div>
+</li>
+
