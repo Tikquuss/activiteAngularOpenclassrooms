@@ -1,0 +1,12 @@
+
+* Lien du dépôt Git (à utiliser pour le clonage) : https://github.com/Tikquuss/activiteAngularOpenclassrooms
+* Une fois le projet cloné, deplacez vous dans le dossier activiteAngularOpenclassrooms et lancez le serveur (ng serve --open)
+* Si votre navigateur ne se lance pas automatiquement, y taper : http://localhost:4200/
+* Vous aurez une application semblable à celle sur la capture joint à ce fichier, avec 4 posts :
+ - le premier post à 0 loveIts (like - dislike) au demarrage, d'où la couleur verte,  qui basculera vert le rouge si vous le dislikez (loveIts=-1);
+ - le second et le quatrieme post ont des loveIts initialisés à -1, d'où leur couleur rouge;
+ - le troisieme post à un loveIts initialisé à 1, d'où sa couleur verte.
+
+* Pour augmenter/diminuer le nombre de post, bien vouloir modifier le tableau posts dans AppComponent
+
+

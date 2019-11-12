@@ -1,5 +1,5 @@
 <li [ngClass]="{'list-group-item': true,
-                'list-group-item-success': loveIts >= 0,
+                'list-group-item-success': loveIts > 0,
                 'list-group-item-danger': loveIts < 0}"> 
     
         <h4 [ngStyle]="{color: getColor()}">
@@ -14,6 +14,9 @@
             <span>  </span>
             <button class="btn btn-sm btn-danger"
                   (click)="onDisLikeIt()">Don't like it !</button>
+            <button style="position:absolute; right:30px;" class="btn btn-sm btn-danger"
+                  (click)="onDelete()">Supprimer post</button>
+            <p class="btn btn-sm" >{{ loveIts }}</p>
         </div>
 </li>
 
