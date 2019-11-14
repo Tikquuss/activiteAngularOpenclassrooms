@@ -15,6 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { PostViewComponent } from './post-view/post-view.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 const appRoutes: Routes = [
   { path: 'posts', component:PostViewComponent},
   { path: 'new', component: NewPostComponent },  
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     FormsModule, // Pour la gestion des formulaires
     RouterModule.forRoot(appRoutes), // pour la gestion des routes
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    HttpClientModule // Pour la communication avec le serveur Firebase
   ],
   providers: [PostService], // Sans oublier le service 
   bootstrap: [AppComponent]
